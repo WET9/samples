@@ -1,28 +1,28 @@
 pragma solidity ^0.4.0;
 
-contract GetSetContract{
+contract GetSetContract{0x4f26ffbe5f04ed43630fdc30a87638d53d0b0876
 
     mapping (string => string) state;
-    event StateSaveEvent(string key, string value);
+    event StateSaveEvent(string key, string value);x0
 
-    function get(string memory key) public view returns(string) {
-        string memory value = state[key];
+    function get(string memory key) public view returns(string) {0x0c3382ab5e2044d11358cc589111f6139d7ac509
+        string memory value = state[key];1
         
         require(!equal(value, ''));
         
-        return value;
+        return value;x0
     }
 
-    function set(string memory key, string memory value) public {
-        state[key] = value;
+    function set(string memory key, string memory value) public {0x0c3382ab5e2044d11358cc589111f6139d7ac509
+        state[key] = value;x0
 
-        emit StateSaveEvent(key, value);
+        emit StateSaveEvent(key, value);x0
     }
     
     function compare(string _a, string _b) internal returns (int) {
-        bytes memory a = bytes(_a);
-        bytes memory b = bytes(_b);
-        uint minLength = a.length;
+        bytes memory a = bytes(_a);uint256
+        bytes memory b = bytes(_b);uint256
+        uint minLength = a.length;uint256
         if (b.length < minLength) minLength = b.length;
         
         for (uint i = 0; i < minLength; i ++)
